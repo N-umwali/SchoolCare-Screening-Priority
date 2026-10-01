@@ -1,0 +1,23 @@
+# Student datasets and review exports
+data/
+uploads/
+exports/
+survey_c_eligible.csv
+screening_review_list*.csv
+
+# Python temporary files and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Notebook temporary files
+.ipynb_checkpoints/
+
+# Credentials and local settings
+.env
+.streamlit/secrets.toml
+
+# Operating system files
+.DS_Store
+Thumbs.db
