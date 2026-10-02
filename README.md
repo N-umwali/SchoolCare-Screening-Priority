@@ -1,8 +1,12 @@
-# SchoolCare — Student Screening Priority
+# SchoolCare: Student Screening Priority
 
 SchoolCare helps secondary-school counsellors organise which students to review first for formal depression screening. It uses information about family support, financial strain, aspirations, and student circumstances.
 
 The screening priority score guides review order. It is not a diagnosis or a percentage chance of depression.
+
+## GitHub repository
+
+[SchoolCare-Screening-Priority](https://github.com/N-umwali/SchoolCare-Screening-Priority)
 
 ## Project Scope
 
@@ -59,6 +63,13 @@ The dashboard provides four pages:
 Individually entered students can be compared with students from an uploaded class sheet. Saved individual entries can also be removed.
 
 Student IDs help counsellors match results to their own school records. Names are not required.
+
+## Interface designs
+
+Dashboard screenshots are stored in `reports/dashboard_screenshots/`.
+
+They show the Home page, questionnaire downloads, class ranking,
+and individual student review.
 
 ## Repository folders
 
@@ -124,6 +135,14 @@ Open the notebook in `notebook/` using Jupyter or Google Colab.
 Follow the steps in order. Keep preprocessing within training folds and retain the original school split, model selection rule, and locked thresholds.
 
 Data paths may need adjusting when running in Google Colab.
+
+## Deployment plan
+
+The initial demonstration runs locally using Streamlit.
+
+A hosted pilot is planned after checking access controls, student-data
+handling, and compatibility with the saved model. Public demonstrations
+use invented student records.
 
 ## Responsible use
 
