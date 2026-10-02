@@ -1,1 +1,10 @@
-streamlit
+# Packages used by the dashboard.
+streamlit==1.45.1
+pandas==2.2.3
+numpy==2.2.6
+joblib==1.5.3
+
+# Keep the saved model compatible with its training environment.
+scikit-learn==1.6.1
+scipy==1.15.3
+threadpoolctl==3.6.0
