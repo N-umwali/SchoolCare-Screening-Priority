@@ -198,8 +198,4 @@ class StreamlitInterface:
                 about their immediate safety, follow your school's
                 safeguarding procedure straight away.
             </div>
-            <div class="app-footer">
-                Pilot version · African Leadership University capstone project
-                · For school counsellors
-            </div>
         """)
