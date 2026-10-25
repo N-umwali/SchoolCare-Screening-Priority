@@ -4,9 +4,13 @@ SchoolCare helps secondary-school counsellors organise which students to review 
 
 The screening priority score guides review order. It is not a diagnosis or a percentage chance of depression.
 
-## GitHub repository
+## Project Links
 
-[SchoolCare-Screening-Priority](https://github.com/N-umwali/SchoolCare-Screening-Priority)
+- **GitHub Repository:** [SchoolCare Screening Priority](https://github.com/N-umwali/SchoolCare-Screening-Priority)
+- **Deployed Application:** [Open SchoolCare](https://schoolcare.streamlit.app/)
+- **Video Demonstration:** [Watch the Video](https://www.youtube.com/watch?v=gsaKQREVI5c)
+- **Technical Report:** [View the Technical Report](reports/SchoolCare_Technical_Report.pdf)
+
 
 ## Project Scope
 
@@ -64,27 +68,57 @@ Individually entered students can be compared with students from an uploaded cla
 
 Student IDs help counsellors match results to their own school records. Names are not required.
 
-## Interface designs
 
-Dashboard screenshots are stored in `reports/dashboard_screenshots/`.
+## Sample Data
 
-They show the Home page, questionnaire downloads, class ranking,
-and individual student review.
+A sample dataset containing eight fictional students is available for testing the class ranking feature.
 
-## Repository folders
+(sample_data/SchoolCare_Sample_Class_List.csv)
+
+The dataset contains student IDs and 34 non-symptom predictors. It can be uploaded through the Rank a Class page to generate screening priority scores and download ranked results.
+
+All student records are fictional and intended for demonstration only.
+
+## Interface and Testing Screenshots
+
+Screenshots of the working application and testing evidence are available in `reports/dashboard_screenshots/`.
+
+The screenshots demonstrate the home page, individual student assessment, class ranking, CSV export, input validation, and automated test results.
+
+These screenshots support the technical report and walkthrough video.
+
+
+## Repository Structure
 
 | Location | Contents |
 |---|---|
-| `codebook/` | Survey wording and answer definitions |
-| `data/` | Locally stored raw and prepared data |
-| `notebook/` | Data preparation, analysis, training, and evaluation |
-| `reports/` | Saved tables and figures |
-| `dashboard/app.py` | Dashboard entry point and navigation |
-| `dashboard/core/` | Questions, answer conversion, checks, scoring, and review session |
-| `dashboard/ui/` | Dashboard pages and styling |
-| `dashboard/model_artifacts/` | Saved pipeline and locked model details |
-| `dashboard/tests/` | Automated checks |
-| `dashboard/requirements.txt` | Required Python packages |
+| `codebook/` | Survey questions and valid answer codes |
+| `dashboard/app.py` | Streamlit application entry point |
+| `dashboard/core/` | Input validation, model prediction, results, and review management |
+| `dashboard/ui/` | Application pages and styling |
+| `dashboard/model_artifacts/` | Saved trained model and model configuration |
+| `dashboard/tests/` | Automated unit and integration tests |
+| `dashboard/requirements.txt` | Python dependencies |
+| `notebook/` | Data cleaning, model training, and evaluation |
+| `reports/figures/` | Evaluation graphs |
+| `reports/ml_results/` | Data analysis and model evaluation results |
+| `reports/dashboard_screenshots/` | Application and testing screenshots |
+| `reports/SchoolCare_Technical_Report.pdf` | Technical report |
+| `sample_data/` | Fictional student dataset for demonstration |
+
+
+## Technical Requirements
+
+- Python 3.11
+- Streamlit 1.45.1
+- scikit-learn 1.6.1
+- pandas 2.2.3
+- NumPy 2.2.6
+- joblib 1.5.3
+- Windows or another compatible environment
+- A modern web browser
+
+The complete dependency list is available in `dashboard/requirements.txt`.
 
 ## Run the dashboard
 
@@ -119,14 +153,24 @@ The following files must be available together:
 
 Use the scikit-learn version recorded in the model details. The saved pipeline and its metadata must come from the same training run.
 
-## Run the tests
+### Automated Test Results
 
-From the repository folder:
+The application was tested using Python 3.11 and scikit-learn 1.6.1.
 
-    cd dashboard
-    python -m unittest discover -s tests -v
+All 37 automated tests passed successfully.
 
-The tests cover answer conversion, input checks, saved model scoring, and review list behaviour.
+The tests cover:
+- Input validation and invalid answer codes
+- Missing and duplicate student records
+- Saved machine-learning model predictions
+- Screening threshold consistency
+- Student ranking and review session management
+- Application page interactions
+
+The tests completed in 2.096 seconds during the recorded run.
+
+Additional testing evidence is available in the technical report.
+
 
 ## Use the notebook
 
@@ -136,12 +180,17 @@ Follow the steps in order. Keep preprocessing within training folds and retain t
 
 Data paths may need adjusting when running in Google Colab.
 
-## Deployment plan
 
-The initial demonstration runs locally using Streamlit.
+## Deployment
 
-A hosted pilot is planned after checking access controls, student-data
-handling, and compatibility with the saved model. Public demonstrations
+SchoolCare is deployed on Streamlit Community Cloud for demonstration and evaluation.
+
+[Open the SchoolCare Application](https://schoolcare.streamlit.app)
+
+The application uses the saved Logistic Regression pipeline to generate screening priority scores.
+
+The deployment is a research prototype. Public demonstrations use fictional student records only. The application is not approved for live clinical or school screening decisions.
+
 use invented student records.
 
 ## Responsible use
