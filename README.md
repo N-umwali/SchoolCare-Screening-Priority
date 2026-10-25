@@ -73,20 +73,20 @@ Student IDs help counsellors match results to their own school records. Names ar
 
 A sample dataset containing eight fictional students is available for testing the class ranking feature.
 
-(sample_data/SchoolCare_Sample_Class_List.csv)
+[Download the Sample Class List](sample_data/SchoolCare_Sample_Class_List.csv)
+
 
 The dataset contains student IDs and 34 non-symptom predictors. It can be uploaded through the Rank a Class page to generate screening priority scores and download ranked results.
 
 All student records are fictional and intended for demonstration only.
 
-## Interface and Testing Screenshots
+## Testing Screenshots
 
-Screenshots of the working application and testing evidence are available in `reports/dashboard_screenshots/`.
+Screenshots of the working application and testing results are available in `reports/test_screenshots/`.
 
-The screenshots demonstrate the home page, individual student assessment, class ranking, CSV export, input validation, and automated test results.
+They demonstrate individual student assessment, class ranking, CSV export, input validation, duplicate student ID handling, and automated testing.
 
-These screenshots support the technical report and walkthrough video.
-
+These screenshots provide evidence of the system's functionality and testing.
 
 ## Repository Structure
 
@@ -102,7 +102,7 @@ These screenshots support the technical report and walkthrough video.
 | `notebook/` | Data cleaning, model training, and evaluation |
 | `reports/figures/` | Evaluation graphs |
 | `reports/ml_results/` | Data analysis and model evaluation results |
-| `reports/dashboard_screenshots/` | Application and testing screenshots |
+| `reports/test_screenshots/` | Screenshots of system functionality and testing results |
 | `reports/SchoolCare_Technical_Report.pdf` | Technical report |
 | `sample_data/` | Fictional student dataset for demonstration |
 
@@ -153,6 +153,18 @@ The following files must be available together:
 
 Use the scikit-learn version recorded in the model details. The saved pipeline and its metadata must come from the same training run.
 
+
+## Run the Tests
+
+From the repository root, run:
+
+```powershell
+cd dashboard
+python -m unittest discover -s tests -v
+```
+
+This runs the automated unit and integration tests.
+
 ### Automated Test Results
 
 The application was tested using Python 3.11 and scikit-learn 1.6.1.
@@ -190,8 +202,6 @@ SchoolCare is deployed on Streamlit Community Cloud for demonstration and evalua
 The application uses the saved Logistic Regression pipeline to generate screening priority scores.
 
 The deployment is a research prototype. Public demonstrations use fictional student records only. The application is not approved for live clinical or school screening decisions.
-
-use invented student records.
 
 ## Responsible use
 
