@@ -106,10 +106,16 @@ def apply_styles():
         /* Brand header and welcome section. */
         .app-brand {
             background: var(--teal-dark);
+            background: var(--teal-dark);
             color: var(--white);
-            padding: 20px 26px;
-            border-radius: 14px;
+            padding: 28px 26px 20px 26px;
+            border-radius: 27px 27px 16px 16px;
+            margin-top: 12px;
             margin-bottom: 12px;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
         }
 
         .app-brand-title {
