@@ -109,11 +109,11 @@ These screenshots provide evidence of the system's functionality and testing.
 
 ## Technical Requirements
 
-- Python 3.11
-- Streamlit 1.45.1
+- Python 3.11.9
+- Streamlit 1.59.1
 - scikit-learn 1.6.1
-- pandas 2.2.3
-- NumPy 2.2.6
+- pandas 3.0.2
+- NumPy 2.4.4
 - joblib 1.5.3
 - Windows or another compatible environment
 - A modern web browser
@@ -167,7 +167,7 @@ This runs the automated unit and integration tests.
 
 ### Automated Test Results
 
-The application was tested using Python 3.11 and scikit-learn 1.6.1.
+The application was tested using Python 3.11.9 and scikit-learn 1.6.1.
 
 All 37 automated tests passed successfully.
 
@@ -179,7 +179,7 @@ The tests cover:
 - Student ranking and review session management
 - Application page interactions
 
-The tests completed in 2.096 seconds during the recorded run.
+The tests completed in 1.753 seconds during the recorded run.
 
 Additional testing evidence is available in the technical report.
 
